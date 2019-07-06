@@ -1,0 +1,15 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cxf="http://camel.apache.org/schema/cxf"
+       xmlns:soap="http://cxf.apache.org/bindings/soap"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+                           http://cxf.apache.org/bindings/soap http://cxf.apache.org/schemas/configuration/soap.xsd">
+	
+	<cxf:cxfEndpoint address="http://dneonline.com/calculator.asmx"
+        endpointName="s:CalculatorSoap" id="Addition"
+        serviceName="s:Calculator" wsdlURL="wsdl/calculator.wsdl" xmlns:s="http://tempuri.org/"/>
+	
+	
+
+</beans>
